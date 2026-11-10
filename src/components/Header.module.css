@@ -1,0 +1,496 @@
+﻿.header {
+    position: relative;
+    z-index: 3;
+    background-color: var(--bg-card-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    font-family: var(--font-body);
+}
+
+.headerMainRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Lado Izquierdo (Hamburguesa + Logo) */
+.headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0; /*evitar deformacion*/
+}
+
+.menuToggleBtn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.headerBrand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+}
+
+.brandLogoIcon {
+    color: var(--color-primary);
+}
+
+.brandText {
+    display: flex;
+    flex-direction: column;
+}
+
+.brandTitle {
+    font-family: var(--font-headline);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--color-primary-600);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.brandSubtitle {
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    margin-top: 2px;
+}
+
+/* Barra de búsqueda (Desktop) */
+.headerSearchBar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-radius: 999px;
+    padding: 7px 14px;
+    gap: 8px;
+    border: 1px solid transparent;
+    transition: all 0.2s ease
+}
+
+.headerSearchBar:focus-within {
+    border-color: var(--color-primary-400);
+    background-color: var(--bg-card-subtle);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    width: 65%;
+}
+
+/* Navegación principal (Desktop) */
+.headerNav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    flex-shrink: 0;
+}
+
+.navLink {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.navLink:hover {
+    color: var(--color-primary-600);
+}
+
+.navLinkFeatured {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.navLinkFeatured:hover {
+    background-color: var(--bg-fetured-color);
+}
+
+.featuredIcon {
+    color: var(--text-main);
+}
+
+.badgePro {
+    background-color: var(--color-primary-600);
+    color: #ffffff;
+    font-size: 0.62rem;
+    font-weight: 800;
+    padding: 2px 5px;
+    border-radius: 5px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+/* Acciones de usuario */
+.headerActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.mobileSearchBtn {
+    display: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--text-muted);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mobileSearchBtn:hover {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+
+.accountBtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 12px 4px 5px;
+    border-radius: 9999px;
+    background-color: var(--bg-card);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.accountBtn:hover {
+    background-color: var(--color-primary-100);
+}
+
+.accountAvatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--color-primary-600);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.accountName {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-main);
+    white-space: nowrap;
+}
+
+.accountChevron {
+    color: var(--text-muted);
+}
+
+/* Botón Carrito */
+.cartBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 16px 6px 12px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.28);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cartBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.38);
+}
+
+.cartBtn:active {
+    transform: translateY(0);
+}
+
+.cartIconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartBadge {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 0.62rem;
+    font-weight: 800;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-primary-600);
+    line-height: 1;
+}
+
+.cartText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.15;
+}
+
+.cartLabel {
+    font-size: 0.60rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    opacity: 0.9;
+}
+
+.cartAmount {
+    font-size: 0.82rem;
+    font-weight: 800;
+    font-family: var(--font-label);
+    letter-spacing: -0.01em;
+}
+
+button:focus-visible, a:focus-visible {
+    outline: 2px solid var(--color-primary-400);
+    outline-offset: 2px;
+}
+
+/* ================Buscador Desplegable en Mobile=================================== */
+.mobileSearchDropdown {
+    padding: 8px 16px 12px;
+    background-color: var(--bg-card-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+    animation: fadeInSlide 0.2s ease-out;
+}
+
+.mobileSearchForm {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-card);
+    border-radius: 9999px;
+    padding: 8px 14px;
+    gap: 8px;
+    border: 1px solid var(--color-primary-400);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+}
+
+/* ===================Menú Desplegable Mobile (Hamburguesa)============================ */
+.mobileMenuBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    background-color: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+.mobileNav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    max-height: calc(100dvh - 100%);
+    overflow-y: auto;
+    background-color: var(--bg-card-subtle);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    animation: slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobileNavLink {
+    display: block;
+    padding: 10px 14px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+    border-radius: 8px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.mobileNavLink:hover {
+    background-color: var(--bg-card);
+    color: var(--color-primary-600);
+}
+
+.mobileNavLinkFeatured {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.mobileNavLinkFeatured:hover {
+    background-color: var(--bg-fetured-color);
+}
+
+.featuredContent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mobileMenuDivider {
+    height: 1px;
+    background-color: var(--border-subtle);
+    margin: 4px 0;
+}
+
+.mobileThemeRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 14px;
+}
+
+.mobileThemeText {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main, #0f172a);
+}
+
+/* ==Animaciones=== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+   Responsive (desktop-first, ordenado de mayor a menor)
+   Cada bloque solo declara lo que CAMBIA; el resto se hereda en cascada.
+
+   Breakpoints (mantener sincronizados con matchMedia en Header.jsx):
+     1340px → acciones compactas (Mi Cuenta y Carrito solo icono)
+     1020px → navegación pasa al menú hamburguesa
+      610px → buscador pasa a icono de lupa
+      480px → logo compacto
+   ========================================================================== */
+
+@media (max-width: 1340px) {
+    .accountName,
+    .accountChevron,
+    .cartText {
+        display: none;
+    }
+
+    .accountBtn {
+        padding: 0;
+        background: transparent;
+        border: none;
+    }
+
+    .cartBtn {
+        padding: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1020px) {
+    .headerMainRow {
+        padding: 10px 14px;
+        gap: 8px;
+    }
+
+    .menuToggleBtn {
+        display: flex;
+    }
+
+    .headerNav {
+        display: none;
+    }
+
+    /* Selector con más especificidad para no depender del orden del CSS */
+    .headerActions .desktopOnly {
+        display: none;
+    }
+}
+
+@media (max-width: 610px) {
+    .headerSearchBar {
+        display: none;
+    }
+
+    .mobileSearchBtn {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .brandTitle {
+        font-size: 1rem;
+    }
+
+    .brandSubtitle {
+        display: none;
+    }
+}

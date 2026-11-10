@@ -1,0 +1,18 @@
+.themeToggleBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: transparent;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.themeToggleBtn:hover {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
