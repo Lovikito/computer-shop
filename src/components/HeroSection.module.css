@@ -1,0 +1,107 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.titleGradient {
+    background: linear-gradient(
+        90deg,
+        var(--color-primary-600),
+        var(--color-secondary-500)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    max-width: 48ch;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 8px;
+}
+
+.btnPrimary,
+.btnSecondary {
+    padding: 12px 26px;
+    border: 1.5px solid;
+    border-radius: 9999px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btnPrimary {
+    border-color: var(--color-primary-600);
+    background-color: var(--color-primary-600);
+    color: #fff;
+}
+
+.btnPrimary:hover {
+    border-color: var(--color-primary-700);
+    background-color: var(--color-primary-700);
+}
+
+.btnSecondary {
+    border-color: var(--color-primary-500);
+    background-color: transparent;
+    color: var(--text-main);
+}
+
+.btnSecondary:hover {
+    background-color: var(--bg-card);
+}
+
+.visual {
+    flex: 1;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 24px;
+    background-color: var(--bg-card);
+}
+
+.visual img {
+    display: block;
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .section {
+        flex-direction: column;
+        gap: 32px;
+        padding: 40px 20px;
+    }
+
+    .visual {
+        width: 100%;
+    }
+}

@@ -1,16 +1,4 @@
-main{
-    background-color: var(--bg-app);
-    color: var(--text-main)
-}
-
-main > section{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-section > div{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.main {
+    background-color: var(--bg-card-subtle);
+    color: var(--text-main);
 }
