@@ -187,7 +187,7 @@
 }
 
 .accountBtn:hover {
-    background-color: var(--color-primary-100);
+    background-color: var(--bg-fetured-color);
 }
 
 .accountAvatar {
