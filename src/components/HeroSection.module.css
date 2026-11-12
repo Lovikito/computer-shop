@@ -94,8 +94,6 @@
     }
 }
 
-
-
 @media (max-width: 900px) {
     .section {
         flex-direction: column;

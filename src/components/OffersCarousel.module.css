@@ -10,10 +10,10 @@
     align-items: stretch;
     gap: 10px;
     margin-bottom: 12px;
-}
-
-.header > p {
-    align-self: flex-end;
+    
+    & > p {
+        align-self: flex-end;
+    }
 }
 
 .countdown {
