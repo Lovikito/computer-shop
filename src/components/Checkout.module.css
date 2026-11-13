@@ -1,0 +1,195 @@
+.checkout {
+    padding: 2rem;
+    background-color: var(--bg-app);
+    color: var(--text-main);
+}
+
+.title {
+    margin-bottom: 1.25rem;
+    font-family: var(--font-headline);
+}
+
+.form,
+.confirmationGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.form {
+    max-width: 56rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    background-color: var(--bg-card-subtle);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fieldFull,
+.submitButton {
+    grid-column: 1 / -1;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.input {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font: inherit;
+}
+
+.input:focus-visible {
+    border-color: var(--color-primary-400);
+    outline: 2px solid var(--color-primary-400);
+    outline-offset: 1px;
+}
+
+.input[aria-invalid="true"] {
+    border-color: var(--color-destructive);
+}
+
+.error {
+    color: var(--color-destructive);
+    font-size: 0.875rem;
+}
+
+.submitButton {
+    justify-self: start;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary-600);
+    color: var(--color-neutral-50);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: var(--color-primary-700);
+}
+
+.newPurchaseButton {
+    margin-top: 1.25rem;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.5rem;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.newPurchaseButton:hover {
+    border-color: var(--color-primary-400);
+}
+
+.submitButton:focus-visible {
+    outline: 2px solid var(--color-primary-400);
+    outline-offset: 2px;
+}
+
+.newPurchaseButton:focus-visible {
+    outline: 2px solid var(--color-primary-400);
+    outline-offset: 2px;
+}
+
+.successMessage,
+.details {
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    background-color: var(--bg-card-subtle);
+}
+
+.successMessage {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
+    padding: 1rem 1.25rem;
+    border-color: var(--color-tertiary-500);
+}
+
+.successMessage strong {
+    font-size: 1.125rem;
+}
+
+.confirmationGrid {
+    align-items: start;
+}
+
+.details {
+    padding: 1.25rem;
+    overflow-wrap: anywhere;
+}
+
+.details p + p {
+    margin-top: 0.4rem;
+}
+
+.sectionTitle {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.orderItems {
+    display: grid;
+    gap: 0.65rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.orderItem,
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.totals {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.shippingNote {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.finalTotal {
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 1.125rem;
+}
+
+@media (max-width: 640px) {
+    .checkout {
+        padding: 1.25rem;
+    }
+
+    .form,
+    .confirmationGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .form {
+        padding: 1rem;
+    }
+}
