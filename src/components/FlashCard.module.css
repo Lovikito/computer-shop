@@ -1,0 +1,46 @@
+.sectionLight, .sectionDark{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    padding-top: 50px;
+    padding-bottom: 250px;
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 35px;
+
+    h2 {
+        text-align: center;
+        font-size: 2.25rem;
+    }
+}
+
+.sectionLight {
+    background-color: var(--bg-card);
+}
+
+.sectionDark {
+    background-color: var(--color-primary-950);
+}
+
+.button {
+    padding: 12px 26px;
+    border: 1.5px solid;
+    border-radius: 9999px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    border-color: var(--color-primary-600);
+    background-color: var(--color-primary-600);
+    color: #fff;
+
+    &:hover {
+        border-color: var(--color-primary-700);
+        background-color: var(--color-primary-700);
+    }
+}

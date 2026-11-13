@@ -2,6 +2,7 @@ import styles from './Main.module.css'
 import { HeroSection } from './HeroSection.jsx'
 import { OffersCarousel } from './OffersCarousel.jsx'
 import { CategoriesSection } from './CategoriesSection.jsx'
+import { FlashCardsSection } from './FlashCardsSection.jsx'
 
 export function Main() {
     return (
@@ -9,6 +10,7 @@ export function Main() {
             <HeroSection />
             <OffersCarousel />
             <CategoriesSection />
+            <FlashCardsSection />
         </main>
     )
 }
