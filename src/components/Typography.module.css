@@ -7,6 +7,21 @@
     color: var(--color-primary-600);
 }
 
+.simpleLabel {
+    font-family: var(--font-label);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-main);
+}
+
+.simpleText {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
 .title {
     font-family: var(--font-headline);
     font-size: clamp(2.25rem, 4.5vw, 3.75rem);
@@ -14,4 +29,13 @@
     line-height: 1.08;
     letter-spacing: -0.03em;
     color: var(--text-main);
+}
+
+.details {
+    font-family: var(--font-label);
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--color-primary-600);
 }
