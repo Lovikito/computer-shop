@@ -10,8 +10,28 @@
 
 .categoryCard{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 15px;
+
+    list-style: none;
+    padding: 0;
+
+    button {
+        border: none;
+        background: none;
+        color: var(--text-main);
+
+        & > div {
+            margin-bottom: 10px;
+        }
+
+        & > span {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    }
+    
 }
 
 .visual {
@@ -19,9 +39,9 @@
     align-items: center;
     justify-content: center;
 
-    width: 200px;
+    width: 250px;
     aspect-ratio: 1;
-    padding: 4px;
+    padding: 2px;
 
     border-radius: 50%;
     border: 1px solid var(--border-subtle);
