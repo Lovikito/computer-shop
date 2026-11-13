@@ -1,4 +1,3 @@
-import { ProductCard } from "./ProductCard"
 import pc1 from '../assets/pc1.png'
 import pc2 from '../assets/pc2.png'
 import styles from './CategoriesSection.module.css'
